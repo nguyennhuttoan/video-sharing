@@ -3,6 +3,10 @@
 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Source Code
+[video-sharing-fe](https://github.com/nguyennhuttoan/video-sharing-fe)(Front-end)
+[video-sharing-be](https://github.com/nguyennhuttoan/video-sharing-be)(Back-end)
+
 ## Introduction
 This video sharing app written in TypeScript is designed to make sharing YouTube videos quick and easy. Simply copy and paste the URL of the video you want to share, and the app will publish a preview of the video. This app uses Nest.js and React + TypeScript using Vite build tool.
 
