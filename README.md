@@ -35,19 +35,25 @@ To start using Video Sharing, clone the repository:
 - Front-end
 
 ```bash
-git clone https://github.com/nguyennhuttoan/video-sharing-fe
+
+git  clone  https://github.com/nguyennhuttoan/video-sharing-fe
+
 ```
 
 - Back-end
 
 ```bash
-git clone https://github.com/nguyennhuttoan/video-sharing-be
+
+git  clone  https://github.com/nguyennhuttoan/video-sharing-be
+
 ```
 
 - Install the required packages via NPM:
 
 ```bash
-npm install
+
+npm  install
+
 ```
 
 ## Database Setup
@@ -57,7 +63,9 @@ Download and install - [MongoDB](https://www.mongodb.com/download-center/communi
 Follow the prompts to install MongoDB, selecting the default options for most settings. 1. Finally, you can start the MongoDB server by running the following command in a terminal or command prompt:
 
 ```bash
-	mongod
+
+mongod
+
 ```
 
 This will start the MongoDB server and it should now be running on your local machine.
@@ -67,13 +75,17 @@ This will start the MongoDB server and it should now be running on your local ma
 - Front-end
 
 ```bash
-npm run dev
+
+npm  run  dev
+
 ```
 
 - Back-end
 
 ```bash
-npm run start:dev
+
+npm  run  start:dev
+
 ```
 
 ## Testing
@@ -83,7 +95,9 @@ npm run start:dev
 Simply run the following command:
 
 ```bash
-npm run test
+
+npm  run  test
+
 ```
 
 ![enter image description here](https://i.imgur.com/OYhLhCu.png)
@@ -93,8 +107,11 @@ npm run test
 ### Backend
 
 - DB_URI: `mongo database uri`
+
 - JWT_SECRET: `generating a token for authentication`
+
 - JWT_EXPIRES: `expires time of jwt token`
+
 - PORT: `server port for developing or testing`
 
 ### Frontend
@@ -106,13 +123,17 @@ npm run test
 First, you must install [Docker Desktop](https://www.docker.com/products/docker-desktop) on your device, and check if it installed with command:
 
 ```bash
-docker --version
+
+docker  --version
+
 ```
 
 Next, look at `docker-compose.yml` file on your root directory. After that, open `terminal` on your project and run:
 
 ```bash
-docker-compose build
+
+docker-compose  build
+
 ```
 
 ## Heroku Deployment
@@ -120,7 +141,9 @@ docker-compose build
 ### Prerequisites
 
 - [video-sharing-be](https://github.com/nguyennhuttoan/video-sharing-be)
+
 - [Heroku account](https://signup.heroku.com/)
+
 - [Heroku CLI](https://cli.heroku.com/)
 
 ### Overview
@@ -130,13 +153,17 @@ docker-compose build
 ### Build the app and run it locally
 
 ```bash
-npm run start
+
+npm  run  start
+
 ```
 
 Start your app locally using the `heroku local` command, which is installed as part of the `Heroku CLI`
 
 ```bash
-heroku local web
+
+heroku  local  web
+
 ```
 
 Your app should now be running on `http://localhost:<your-port>`.
@@ -148,24 +175,39 @@ Your app should now be running on `http://localhost:<your-port>`.
 After you commit your changes to git, you can deploy your app to `Heroku`
 
 ```bash
-git add .
-git commit -m "Something"
-heroku login
-Enter your Heroku credentials.
+
+git  add  .
+
+git  commit  -m  "Something"
+
+heroku  login
+
+Enter  your  Heroku  credentials.
+
 ...
-heroku create
-git push heroku master
+
+heroku  create
+
+git  push  heroku  master
+
 ...
------> Node.js app detected
+
+----->  Node.js  app  detected
+
 ...
------> Launching... done
-       http://<your-app-name>.herokuapp.com deployed to Heroku
+
+----->  Launching...  done
+
+http://<your-app-name>.herokuapp.com  deployed  to  Heroku
+
 ```
 
 To open the app in your browser, type:
 
 ```bash
-heroku open
+
+heroku  open
+
 ```
 
 ## Vercel Frontend Deployment
@@ -173,26 +215,37 @@ heroku open
 ### Prerequisites
 
 - [video-sharing-fe](https://github.com/nguyennhuttoan/video-sharing-fe)
+
 - [Vercel CLI](https://cli.heroku.com/)
 
 Run the following command:
 
 ```bash
-vercel .
+
+vercel  .
+
 ```
 
 The app will be deployed by Vercel CLI (below image):
+
 ![enter image description here](https://i.imgur.com/C9dvfQj.png)
 
 ## Notable Packages
 
-- [Nest.js](https://docs.nestjs.com/))
+- [Nest.js](https://docs.nestjs.com/)
+
 - [Vite.js](https://www.npmjs.com/package/vite)
+
 - [Ant Design](https://www.npmjs.com/package/antd)
+
 - [Mongoose](https://www.npmjs.com/package/mongoose)
+
 - [Axios](https://www.npmjs.com/package/axios)
+
 - [ReactPlayer](https://www.npmjs.com/package/react-player)
+
 - [JWT](https://www.npmjs.com/package/jwt)
+
 - more and more can be found at [front-end](https://github.com/nguyennhuttoan/video-sharing-fe/blob/main/package.json) and [backend](https://github.com/nguyennhuttoan/video-sharing-be/blob/master/package.json) package.json files.
 
 ## API Document
@@ -208,28 +261,100 @@ The Auth APIs enables you to manage all aspects of user identity. If offers endp
 Description: The Register and Login API lets user create an account if the email they entered is not registered yet in the database or performing authenticate if the account is registered.
 
 - **URL**: /v1/auth/login
+
 - **Method**: POST
+
 - **URL Params**: None
+
 - **Request Body**:
 
-  ```json
-  {
-    "email": "example@email.com",
-    "password": "password"
-  }
-  ```
+```json
+{
+  "email": "example@email.com",
+
+  "password": "password"
+}
+```
 
 - **Success Response**:
-  When user register successfully, en email with a link to active their account will be send to their mail address. Response include a message to notify user.
-  - Code: 201 or 200
+
+- Code: 201 or 200
+
+- Content:
+
+```json
+{
+  "token": "your token here"
+}
+```
+
+- **Error Response**:
+
+- Condition: There was a problem with the request. Check the request parameters and JSON format.
+
+- Code: 401
+
+- Content:
+
+```json
+{
+  "statusCode": 401,
+  "message": "Invalid email or password",
+  "error": "Unauthorized"
+}
+```
+
+#### Video Management
+
+#### Get all videos
+
+Description: Get videos in system and return a list of videos.
+
+- **URL**: /v1/video
+- **Method**: GET
+- **URL Params**: None
+- **Success Response**:
+  - Code: 200
+  - Content:
+  ```
+    [
+      {
+  	    "title": "Test2",
+  	    "description": "Test2",
+  	    "url": "https://www.youtube.com/watch?v=testing1234"
+  	},
+      {
+  	    "title": "Test1",
+  	    "description": "Test1",
+  	    "url": "https://www.youtube.com/watch?v=testing123"
+      }
+  ]
+  ```
+
+#### Create a video
+
+- **URL**: /v1/video
+- **Method**: POST
+- **Request Headers**:
+  ```
+  { "Authorization" : "Bearer token" }
+  ```
+  - **Success Response**:
+  - Code: 200
   - Content:
   ```json
   {
-    "token": "your token here"
+    "title": "Test3",
+    "description": "test3",
+    "url": "https://www.youtube.com/watch?v=Test3",
+    "user": "645f4102ee701bd6de3b6a74",
+    "_id": "645f44e6ee701bd6de3b6a7c",
+    "createdAt": "2023-05-13T08:05:58.197Z",
+    "updatedAt": "2023-05-13T08:05:58.197Z",
+    "__v": 0
   }
   ```
 - **Error Response**:
-  - Condition: There was a problem with the request. Check the request parameters and JSON format.
   - Code: 401
   - Content:
   ```json
