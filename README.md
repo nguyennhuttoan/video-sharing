@@ -21,11 +21,8 @@ This video sharing app written in TypeScript is designed to make sharing YouTube
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/) 18.16.0 (LTS) which includes [Node Package Manager](https://www.npmjs.com/get-npm)
-
 - [MongoDB](https://www.mongodb.com/download-center/community) (6.0.5)
-
 - [Git](https://git-scm.com/)
-
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 ## Installation & Configuration
@@ -93,11 +90,8 @@ npm run test
 ### Backend
 
 - DB_URI: `mongo database uri`
-
 - JWT_SECRET: `generating a token for authentication`
-
 - JWT_EXPIRES: `expires time of jwt token`
-
 - PORT: `server port for developing or testing`
 
 ### Frontend
@@ -157,8 +151,6 @@ After you commit your changes to git, you can deploy your app to `Heroku`
 git add .
 git commit -m "Something"
 heroku login
-our Heroku credentials.
-...
 heroku create
 git push heroku master
 ```
