@@ -268,7 +268,6 @@ Description: The Register and Login API lets user create an account if the email
 ```json
 {
   "email": "example@email.com",
-
   "password": "password"
 }
 ```
@@ -296,9 +295,7 @@ Description: The Register and Login API lets user create an account if the email
 ```json
 {
   "statusCode": 401,
-
   "message": "Invalid email or password",
-
   "error": "Unauthorized"
 }
 ```
@@ -325,17 +322,12 @@ Description: Get videos in system and return a list of videos.
 [
   {
     "title": "Test2",
-
     "description": "Test2",
-
     "url": "https://www.youtube.com/watch?v=testing1234"
   },
-
   {
     "title": "Test1",
-
     "description": "Test1",
-
     "url": "https://www.youtube.com/watch?v=testing123"
   }
 ]
@@ -364,19 +356,12 @@ Description: Get videos in system and return a list of videos.
 ```json
 {
   "title": "Test3",
-
   "description": "test3",
-
   "url": "https://www.youtube.com/watch?v=Test3",
-
   "user": "645f4102ee701bd6de3b6a74",
-
   "_id": "645f44e6ee701bd6de3b6a7c",
-
   "createdAt": "2023-05-13T08:05:58.197Z",
-
   "updatedAt": "2023-05-13T08:05:58.197Z",
-
   "__v": 0
 }
 ```
@@ -390,9 +375,6 @@ Description: Get videos in system and return a list of videos.
 ```json
 {
   "statusCode": 401,
-
-  "message": "Invalid email or password",
-
   "error": "Unauthorized"
 }
 ```
@@ -411,17 +393,23 @@ After logging in, we will see our email address shows on the header and 2 button
 
 ### Post video
 
+#### Step 1
+
 In this page, a form that prompt you to enter your video information.
 ![enter image description here](https://i.imgur.com/MsAmldU.png)
 
+#### Step 2
+
 After entering all of the necessary information, hit Post button.
 ![enter image description here](https://i.imgur.com/AavKmai.png)
-After clicking the Post button, your browser will be redirected back to homepage and the new video that you just posted will be shown.
 
+#### Step 3
+
+After clicking the Post button, your browser will be redirected back to homepage and the new video that you just posted will be shown.
 ![enter image description here](https://i.imgur.com/53EPTEd.png)
 
 ## Troubleshooting
 
 ### Unable to connect mongoDB using nestjs/mongoose locally
 
-- Try to change the MONGO_URI from `mongodb://localhost:27017` to `mongodb://127.0.0.1:27017`
+- Try to change the DB_URI from `mongodb://localhost:27017` to `mongodb://127.0.0.1:27017`
