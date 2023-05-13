@@ -20,9 +20,9 @@ This video sharing app written in TypeScript is designed to make sharing YouTube
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/en/download/) 18.16.0 (LTS) which includes [Node Package Manager](https://www.npmjs.com/get-npm).
+- [Node.js](https://nodejs.org/en/download/) 18.16.0 (LTS) which includes [Node Package Manager](https://www.npmjs.com/get-npm)
 
-- [MongoDB](https://www.mongodb.com/download-center/community) (6.0.5).
+- [MongoDB](https://www.mongodb.com/download-center/community) (6.0.5)
 
 - [Git](https://git-scm.com/)
 
@@ -36,7 +36,11 @@ To start using Video Sharing, clone the repository:
 
 ```bash
 
+
+
 git  clone  https://github.com/nguyennhuttoan/video-sharing-fe
+
+
 
 ```
 
@@ -44,7 +48,11 @@ git  clone  https://github.com/nguyennhuttoan/video-sharing-fe
 
 ```bash
 
+
+
 git  clone  https://github.com/nguyennhuttoan/video-sharing-be
+
+
 
 ```
 
@@ -52,7 +60,11 @@ git  clone  https://github.com/nguyennhuttoan/video-sharing-be
 
 ```bash
 
+
+
 npm  install
+
+
 
 ```
 
@@ -64,7 +76,11 @@ Follow the prompts to install MongoDB, selecting the default options for most se
 
 ```bash
 
+
+
 mongod
+
+
 
 ```
 
@@ -76,7 +92,11 @@ This will start the MongoDB server and it should now be running on your local ma
 
 ```bash
 
+
+
 npm  run  dev
+
+
 
 ```
 
@@ -84,7 +104,11 @@ npm  run  dev
 
 ```bash
 
+
+
 npm  run  start:dev
+
+
 
 ```
 
@@ -96,7 +120,11 @@ Simply run the following command:
 
 ```bash
 
+
+
 npm  run  test
+
+
 
 ```
 
@@ -124,7 +152,11 @@ First, you must install [Docker Desktop](https://www.docker.com/products/docker-
 
 ```bash
 
+
+
 docker  --version
+
+
 
 ```
 
@@ -132,7 +164,11 @@ Next, look at `docker-compose.yml` file on your root directory. After that, open
 
 ```bash
 
+
+
 docker-compose  build
+
+
 
 ```
 
@@ -154,7 +190,11 @@ docker-compose  build
 
 ```bash
 
+
+
 npm  run  start
+
+
 
 ```
 
@@ -162,7 +202,11 @@ Start your app locally using the `heroku local` command, which is installed as p
 
 ```bash
 
+
+
 heroku  local  web
+
+
 
 ```
 
@@ -176,29 +220,55 @@ After you commit your changes to git, you can deploy your app to `Heroku`
 
 ```bash
 
+
+
 git  add  .
+
+
 
 git  commit  -m  "Something"
 
+
+
 heroku  login
+
+
 
 Enter  your  Heroku  credentials.
 
+
+
 ...
+
+
 
 heroku  create
 
+
+
 git  push  heroku  master
 
+
+
 ...
+
+
 
 ----->  Node.js  app  detected
 
+
+
 ...
+
+
 
 ----->  Launching...  done
 
+
+
 http://<your-app-name>.herokuapp.com  deployed  to  Heroku
+
+
 
 ```
 
@@ -206,7 +276,11 @@ To open the app in your browser, type:
 
 ```bash
 
+
+
 heroku  open
+
+
 
 ```
 
@@ -222,7 +296,11 @@ Run the following command:
 
 ```bash
 
+
+
 vercel  .
+
+
 
 ```
 
@@ -299,7 +377,9 @@ Description: The Register and Login API lets user create an account if the email
 ```json
 {
   "statusCode": 401,
+
   "message": "Invalid email or password",
+
   "error": "Unauthorized"
 }
 ```
@@ -311,75 +391,114 @@ Description: The Register and Login API lets user create an account if the email
 Description: Get videos in system and return a list of videos.
 
 - **URL**: /v1/video
+
 - **Method**: GET
+
 - **URL Params**: None
+
 - **Success Response**:
-  - Code: 200
-  - Content:
-  ```json
-  [
-    {
-      "title": "Test2",
-      "description": "Test2",
-      "url": "https://www.youtube.com/watch?v=testing1234"
-    },
-    {
-      "title": "Test1",
-      "description": "Test1",
-      "url": "https://www.youtube.com/watch?v=testing123"
-    }
-  ]
-  ```
+
+- Code: 200
+
+- Content:
+
+```json
+[
+  {
+    "title": "Test2",
+
+    "description": "Test2",
+
+    "url": "https://www.youtube.com/watch?v=testing1234"
+  },
+
+  {
+    "title": "Test1",
+
+    "description": "Test1",
+
+    "url": "https://www.youtube.com/watch?v=testing123"
+  }
+]
+```
 
 #### Create a video
 
 - **URL**: /v1/video
+
 - **Method**: POST
+
 - **Request Headers**:
-  ```
-  { "Authorization" : "Bearer token" }
-  ```
-  - **Success Response**:
-  - Code: 200
-  - Content:
-  ```json
-  {
-    "title": "Test3",
-    "description": "test3",
-    "url": "https://www.youtube.com/watch?v=Test3",
-    "user": "645f4102ee701bd6de3b6a74",
-    "_id": "645f44e6ee701bd6de3b6a7c",
-    "createdAt": "2023-05-13T08:05:58.197Z",
-    "updatedAt": "2023-05-13T08:05:58.197Z",
-    "__v": 0
-  }
-  ```
+
+```
+
+{ "Authorization" : "Bearer token" }
+
+```
+
+- **Success Response**:
+
+- Code: 200
+
+- Content:
+
+```json
+{
+  "title": "Test3",
+
+  "description": "test3",
+
+  "url": "https://www.youtube.com/watch?v=Test3",
+
+  "user": "645f4102ee701bd6de3b6a74",
+
+  "_id": "645f44e6ee701bd6de3b6a7c",
+
+  "createdAt": "2023-05-13T08:05:58.197Z",
+
+  "updatedAt": "2023-05-13T08:05:58.197Z",
+
+  "__v": 0
+}
+```
+
 - **Error Response**:
-  - Code: 401
-  - Content:
-  ```json
-  {
-    "statusCode": 401,
-    "message": "Invalid email or password",
-    "error": "Unauthorized"
-  }
-  ```
+
+- Code: 401
+
+- Content:
+
+```json
+{
+  "statusCode": 401,
+
+  "message": "Invalid email or password",
+
+  "error": "Unauthorized"
+}
+```
 
 ## Usage
 
-Homepage
+### Homepage
+
+This is our homepage. In this page we can view a list of YouTube videos that have been uploaded by users. There also have 2 textboxes that prompt user to enter their email and password. Feel free to enter your email and hit Login/Register button.
 ![enter image description here](https://i.imgur.com/QIoY307.png)
 
-After logging in
+### Logged in
+
+After logging in, we will see our email address shows on the header and 2 buttons (Post and Logout). If you want to post a new video, simply click Post button. If you finally finish posting, simply click the Logout button if you want to sign out.
 ![enter image description here](https://i.imgur.com/Q8i4LuW.png)
 
-Post video
+### Post video
+
+In this page, a form that prompt you to enter your video information.
 ![enter image description here](https://i.imgur.com/MsAmldU.png)
 
-Enter information
+After entering all of the necessary information, hit Post button.
 ![enter image description here](https://i.imgur.com/AavKmai.png)
+After clicking the Post button, your browser will be redirected back to homepage and the new video that you just posted will be shown.
 
-Redirect back to homepage
 ![enter image description here](https://i.imgur.com/53EPTEd.png)
 
 ## Troubleshooting
