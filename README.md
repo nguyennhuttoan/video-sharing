@@ -126,9 +126,7 @@ Containers are shown after composing:
 ### Prerequisites
 
 - [video-sharing-be](https://github.com/nguyennhuttoan/video-sharing-be)
-
 - [Heroku account](https://signup.heroku.com/)
-
 - [Heroku CLI](https://cli.heroku.com/)
 
 ### Overview
@@ -149,58 +147,20 @@ heroku  local  web
 
 Your app should now be running on `http://localhost:<your-port>`.
 
-## Deploy the application to Heroku
+## Deploy the application
 
-### Backend
+### Backend (Heroku)
 
 After you commit your changes to git, you can deploy your app to `Heroku`
 
 ```bash
 git  add  .
-
-
-
 git  commit  -m  "Something"
-
-
-
 heroku  login
-
-
-
-Enter  your  Heroku  credentials.
-
-
-
+our  Heroku  credentials.
 ...
-
-
-
 heroku  create
-
-
-
 git  push  heroku  master
-
-
-
-...
-
-
-
------>  Node.js  app  detected
-
-
-
-...
-
-
-
------>  Launching...  done
-
-
-
-http://<your-app-name>.herokuapp.com  deployed  to  Heroku
 ```
 
 To open the app in your browser, type:
@@ -209,9 +169,9 @@ To open the app in your browser, type:
 heroku  open
 ```
 
-## Vercel Frontend Deployment
+### Frontend (Vercel)
 
-### Prerequisites
+#### Prerequisites
 
 - [video-sharing-fe](https://github.com/nguyennhuttoan/video-sharing-fe)
 
@@ -219,8 +179,16 @@ heroku  open
 
 Run the following command:
 
+#### For preview
+
 ```bash
 vercel  .
+```
+
+#### For production
+
+```bash
+vercel  . --prod
 ```
 
 The app will be deployed by Vercel CLI (below image):
@@ -230,26 +198,19 @@ The app will be deployed by Vercel CLI (below image):
 ## Notable Packages
 
 - [Nest.js](https://docs.nestjs.com/)
-
 - [Vite.js](https://www.npmjs.com/package/vite)
-
 - [Ant Design](https://www.npmjs.com/package/antd)
-
 - [Mongoose](https://www.npmjs.com/package/mongoose)
-
 - [Axios](https://www.npmjs.com/package/axios)
-
 - [ReactPlayer](https://www.npmjs.com/package/react-player)
-
 - [JWT](https://www.npmjs.com/package/jwt)
-
 - more and more can be found at [front-end](https://github.com/nguyennhuttoan/video-sharing-fe/blob/main/package.json) and [backend](https://github.com/nguyennhuttoan/video-sharing-be/blob/master/package.json) package.json files.
 
 ## API Document
 
 ## Features
 
-### Authentication and Authorization
+### Authentication
 
 The Auth APIs enables you to manage all aspects of user identity. If offers endpoints so users can log in, sign up.
 
