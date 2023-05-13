@@ -316,18 +316,18 @@ Description: Get videos in system and return a list of videos.
 - **Success Response**:
   - Code: 200
   - Content:
-  ```
-    [
-      {
-  	    "title": "Test2",
-  	    "description": "Test2",
-  	    "url": "https://www.youtube.com/watch?v=testing1234"
-  	},
-      {
-  	    "title": "Test1",
-  	    "description": "Test1",
-  	    "url": "https://www.youtube.com/watch?v=testing123"
-      }
+  ```json
+  [
+    {
+      "title": "Test2",
+      "description": "Test2",
+      "url": "https://www.youtube.com/watch?v=testing1234"
+    },
+    {
+      "title": "Test1",
+      "description": "Test1",
+      "url": "https://www.youtube.com/watch?v=testing123"
+    }
   ]
   ```
 
@@ -367,7 +367,20 @@ Description: Get videos in system and return a list of videos.
 
 ## Usage
 
-WIP
+Homepage
+![enter image description here](https://i.imgur.com/QIoY307.png)
+
+After logging in
+![enter image description here](https://i.imgur.com/Q8i4LuW.png)
+
+Post video
+![enter image description here](https://i.imgur.com/MsAmldU.png)
+
+Enter information
+![enter image description here](https://i.imgur.com/AavKmai.png)
+
+Redirect back to homepage
+![enter image description here](https://i.imgur.com/53EPTEd.png)
 
 ## Troubleshooting
 
