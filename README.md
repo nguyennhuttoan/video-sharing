@@ -1,6 +1,6 @@
 # Video Sharing
 
-A video sharing platform that uses React, Vite, Nest.js, and TypeScript that allows users to easily share their favorite YouTube URLs.
+A video sharing platform that uses React, Vite, Nest.js, WebSocket, and TypeScript that allows users to easily share their favorite YouTube URLs.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -16,7 +16,7 @@ A video sharing platform that uses React, Vite, Nest.js, and TypeScript that all
 
 ## Introduction
 
-This video sharing app written in TypeScript is designed to make sharing YouTube videos quick and easy. Simply copy and paste the URL of the video you want to share, and the app will publish a preview of the video. This app uses Nest.js and React + TypeScript using Vite build tool.
+This video sharing app written in TypeScript is designed to make sharing YouTube videos quick and easy. Simply copy and paste the URL of the video you want to share, and the app will publish a preview of the video. This app uses Nest.js and React + TypeScript using Vite build tool and WebSocket (Socket.io).
 
 ## Prerequisites
 
@@ -97,6 +97,7 @@ npm run test
 ### Frontend
 
 - VITE_API_URL: `API URL of backend service`
+- VITE_API_WS_URL: `API URL of backend websocket service`
 
 ## Docker Deployment
 
@@ -190,6 +191,7 @@ The app will be deployed by Vercel CLI (below image):
 ## Notable Packages
 
 - [Nest.js](https://docs.nestjs.com/)
+- [Socket.io](https://socket.io/docs/v4/)
 - [Vite.js](https://www.npmjs.com/package/vite)
 - [Ant Design](https://www.npmjs.com/package/antd)
 - [Mongoose](https://www.npmjs.com/package/mongoose)
@@ -359,7 +361,11 @@ After entering all of the necessary information, hit Post button.
 #### Step 3
 
 After clicking the Post button, your browser will be redirected back to homepage and the new video that you just posted will be shown.
-![enter image description here](https://i.imgur.com/53EPTEd.png)
+
+## Notification system
+
+When a new video is uploaded, a message will be sent to all users to notify them a new video is uploaded by someone.
+![enter image description here](https://i.imgur.com/n0uPJGH.png)
 
 ## Troubleshooting
 
