@@ -118,6 +118,9 @@ Next, look at `docker-compose.yml` file on your root directory. After that, open
 docker-compose  build
 ```
 
+Containers are shown after composing:
+![enter image description here](https://i.imgur.com/BfR1dgF.png)
+
 ## Heroku Deployment
 
 ### Prerequisites
