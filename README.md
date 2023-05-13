@@ -35,37 +35,19 @@ To start using Video Sharing, clone the repository:
 - Front-end
 
 ```bash
-
-
-
 git  clone  https://github.com/nguyennhuttoan/video-sharing-fe
-
-
-
 ```
 
 - Back-end
 
 ```bash
-
-
-
 git  clone  https://github.com/nguyennhuttoan/video-sharing-be
-
-
-
 ```
 
 - Install the required packages via NPM:
 
 ```bash
-
-
-
 npm  install
-
-
-
 ```
 
 ## Database Setup
@@ -75,13 +57,7 @@ Download and install - [MongoDB](https://www.mongodb.com/download-center/communi
 Follow the prompts to install MongoDB, selecting the default options for most settings. 1. Finally, you can start the MongoDB server by running the following command in a terminal or command prompt:
 
 ```bash
-
-
-
 mongod
-
-
-
 ```
 
 This will start the MongoDB server and it should now be running on your local machine.
@@ -91,25 +67,13 @@ This will start the MongoDB server and it should now be running on your local ma
 - Front-end
 
 ```bash
-
-
-
 npm  run  dev
-
-
-
 ```
 
 - Back-end
 
 ```bash
-
-
-
 npm  run  start:dev
-
-
-
 ```
 
 ## Testing
@@ -119,13 +83,7 @@ npm  run  start:dev
 Simply run the following command:
 
 ```bash
-
-
-
 npm  run  test
-
-
-
 ```
 
 ![enter image description here](https://i.imgur.com/OYhLhCu.png)
@@ -151,25 +109,13 @@ npm  run  test
 First, you must install [Docker Desktop](https://www.docker.com/products/docker-desktop) on your device, and check if it installed with command:
 
 ```bash
-
-
-
 docker  --version
-
-
-
 ```
 
 Next, look at `docker-compose.yml` file on your root directory. After that, open `terminal` on your project and run:
 
 ```bash
-
-
-
 docker-compose  build
-
-
-
 ```
 
 ## Heroku Deployment
@@ -189,25 +135,13 @@ docker-compose  build
 ### Build the app and run it locally
 
 ```bash
-
-
-
 npm  run  start
-
-
-
 ```
 
 Start your app locally using the `heroku local` command, which is installed as part of the `Heroku CLI`
 
 ```bash
-
-
-
 heroku  local  web
-
-
-
 ```
 
 Your app should now be running on `http://localhost:<your-port>`.
@@ -219,9 +153,6 @@ Your app should now be running on `http://localhost:<your-port>`.
 After you commit your changes to git, you can deploy your app to `Heroku`
 
 ```bash
-
-
-
 git  add  .
 
 
@@ -267,21 +198,12 @@ git  push  heroku  master
 
 
 http://<your-app-name>.herokuapp.com  deployed  to  Heroku
-
-
-
 ```
 
 To open the app in your browser, type:
 
 ```bash
-
-
-
 heroku  open
-
-
-
 ```
 
 ## Vercel Frontend Deployment
@@ -295,13 +217,7 @@ heroku  open
 Run the following command:
 
 ```bash
-
-
-
 vercel  .
-
-
-
 ```
 
 The app will be deployed by Vercel CLI (below image):
