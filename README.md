@@ -49,9 +49,9 @@ npm install
 
 ## Database Setup
 
-Download and install - [MongoDB](https://www.mongodb.com/download-center/community) (6.0.5). 1. Once the download is complete, double-click the downloaded file to begin the installation process.
+Download and install - [MongoDB](https://www.mongodb.com/download-center/community) (6.0.5). Once the download is complete, double-click the downloaded file to begin the installation process.
 
-Follow the prompts to install MongoDB, selecting the default options for most settings. 1. Finally, you can start the MongoDB server by running the following command in a terminal or command prompt:
+Follow the prompts to install MongoDB, selecting the default options for most settings. Finally, you can start the MongoDB server by running the following command in a terminal or command prompt:
 
 ```bash
 mongod
@@ -85,7 +85,7 @@ npm run test
 
 ![enter image description here](https://i.imgur.com/OYhLhCu.png)
 
-## Configuration
+## Environment Variables
 
 ### Backend
 
@@ -198,7 +198,7 @@ The app will be deployed by Vercel CLI (below image):
 - [Axios](https://www.npmjs.com/package/axios)
 - [ReactPlayer](https://www.npmjs.com/package/react-player)
 - [JWT](https://www.npmjs.com/package/jwt)
-- more and more can be found at [front-end](https://github.com/nguyennhuttoan/video-sharing-fe/blob/main/package.json) and [backend](https://github.com/nguyennhuttoan/video-sharing-be/blob/master/package.json) package.json files.
+- more and more can be found at [front-end](https://github.com/nguyennhuttoan/video-sharing-fe/blob/main/package.json) and [back-end](https://github.com/nguyennhuttoan/video-sharing-be/blob/master/package.json) package.json files.
 
 ## API Document
 
@@ -361,6 +361,7 @@ After entering all of the necessary information, hit Post button.
 #### Step 3
 
 After clicking the Post button, your browser will be redirected back to homepage and the new video that you just posted will be shown.
+![enter image description here](https://i.imgur.com/53EPTEd.png)
 
 ## Notification system
 
